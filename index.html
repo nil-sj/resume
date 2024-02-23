@@ -1,19 +1,106 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="Resume of a marketer turned programmer who has fallen in love with web development"/>
 
-<head>
-</head>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico" alt="NJ" />
+      <script src="https://kit.fontawesome.com/e916beee37.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="styles.css">
 
-<body>
-   <!-- Write your HTML in this file! -->
-   <!-- header which includes nav and slim height hero -->
-   <!-- main -->
-   <!-- sections and in sections there will be section headings and one or more articles -->
-   <!-- About, two cols - one about professional intro, other about personal interests -->
-   <!-- Profile, which has two cols, left has photo, and some basic details, right side has more info, exp, qualifications, etc. and download resume  -->
-   <!-- Projects, showcases some projects as blocks (use css grid) -->
-   <!-- Contact, two cols - one containing some info, right column containing a form -->
-   <!-- footer which contains some info on the exercise, created with, copyright, etc. -->
-</body>
-
+      <title>Resume | Nil SJ</title>
+   </head>
+   <body>
+      <!-- Write your HTML in this file! -->
+      <!-- header which includes nav menu with responsive styling -->
+      <header>
+         <div class="container">
+            <div class="logo">
+               <a href="#"><img class="logo-img" src="images/nj-logo-216.png" alt="logo"></a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span><img src="images/hamburger_icon_32.png" alt="menu"></span></label>
+            <nav>
+               <ul>
+                  <li><a href="#" class="nav-link active">Home</a></li>
+                  <li><a href="#about" class="nav-link">About</a></li>
+                  <li><a href="#profile" class="nav-link">Profile</a></li>
+                  <li><a href="#projects" class="nav-link">Projects</a></li>
+                  <li><a href="#contact" class="nav-link">Contact</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <!-- main -->
+      <main>
+         <div class="container">
+            <!-- sections and in sections there will be section headings and one or more articles -->
+            <!-- A Hero Section -->
+            <section id="hero">
+               <div class="temp-space" style="min-height: 80vh;">Hero</div>
+            </section>
+            <!-- About, two cols - one about professional intro, other about personal interests -->
+            <section id="about">
+               <h2 class="section-heading">About</h2>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+            </section>
+            <!-- Profile, which has two cols, left has photo, and some basic details, right side has more info, exp, qualifications, etc. and download resume  -->
+            <section id="profile">
+               <h2 class="section-heading">Profile</h2>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+            </section>
+            <!-- Projects, showcases some projects as blocks (use css grid) -->
+            <section id="projects">
+               <h2 class="section-heading">Projects</h2>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+               <article>Article 1</article>
+               <article>Article 2</article>
+            </section>
+            <!-- Contact, two cols - one containing some info, right column containing a form -->
+            <section id="contact">
+               <h2 class="section-heading">Contact</h2>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+            </section>
+         </div>
+      </main>
+      <!-- footer which contains some info on the exercise, created with, copyright, etc. -->
+      <footer>
+         <div class="container">
+            <p>
+               Created with passion and some basic web development skills:<br>
+               <a href="https://web.dev/learn/html" title="learn HTML with web.dev resource" target="_blank"><i class="fa-brands fa-html5"></i> HTML</span></a>
+               <span class="footer-separator">&ndash;</span>
+               <a href="https://www.kevinpowell.co/" title="check out this guy and his YouTube channel" target="_blank"><i class="fa-brands fa-css3"></i> CSS</a>
+               <span class="footer-separator">&ndash;</span> 
+               <a href="https://javascript.info/" title="view this wonderful resource on JavaScript!" target="_blank"><i class="fa-brands fa-js"></i> JavaScript</a>
+            </p>
+            <p>
+               Based on the requirements in Graded Assignment #4 for Launch Code Course on Web Development<br>
+               <a href="https://education.launchcode.org/intro-to-web-dev-curriculum/assignments/html-me-something/index.html" title="view the project requirements" target="_blank">DevSpecs</a>
+               <span class="footer-separator">|</span>
+               <a href="https://github.com/nil-sj/resume" title="check out the GitHub repository" target="_blank">SourceCode</a>
+               <span class="footer-separator">|</span>
+               <a href="https://www.netlify.com/" title="free hosting service with form data handler" target="_blank">Netlify</a>
+            </p>
+            <hr>
+            <p>
+               Copyright &copy; <span class="copy-year">YYYY</span> <a href="https://codenil.online" title="yours truly" target="_blank">Nil SJ</a>
+            </p>
+         </div>
+      </footer>
+      <script src="scripts/script.js"></script>
+   </body>
 </html>

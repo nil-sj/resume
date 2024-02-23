@@ -1,1 +1,229 @@
 /* Write your CSS here! */
+
+:root {
+    /* color scheme inspired by https://images.squarespace-cdn.com/content/v1/5720ede5555986b16f146642/1637544782211-RNG659BO3A02V06OTN9W/Wood+Pile+SQ.jpg */
+    --text-dark-color: rgba(2, 24, 37, 1);
+    --text-light-color: rgba(67, 74, 84, 1);
+    --light-bg-color: rgba(220, 204, 189, 1);
+    --dark-bg-color: rgba(212, 153, 111, 1);
+    --accent-color: rgba(177, 76, 50, 1);
+    --nav-background-color: rgba(220, 204, 189, 0.85);
+    --body-background-color: rgba(231, 241, 243, 1);
+    --container-max-width: 1399px;
+    --min-padding: 0.5rem;
+    --min-gap: 1.8rem;
+    
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-background-color);
+    /* background courtesy: https://www.pixeden.com/graphic-web-backgrounds/subtle-light-tile-pattern-vol6 */
+    background: url('images/03-light-carpet.png');
+    backdrop-filter: brightness(80%);
+    backdrop-filter: contrast(80%);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text-dark-color);
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    background-color: white;
+    background: url('images/02-heavy-paper.png');
+}
+
+/* Navigation Styles */
+
+header {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: grid;
+    grid-template-columns: auto minmax(600px, 3fr);
+    background-color: var(--nav-background-color);
+    background: url('images/04-polish-wood.png');
+    box-shadow: 0 3px 3px -2px hsla(217, 19%, 35%, 0.2);
+}
+
+.logo {
+    font-size: 2rem;
+    padding: var(--min-padding);
+}
+
+.logo-img {
+    max-width: 2.5rem;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: var(--min-padding);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--min-gap);
+}
+
+nav li {
+    padding: var(--min-padding);
+    border-bottom: 2px solid transparent;
+}
+
+nav a {
+    color: var(--text-light-color);
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+nav li:has(.nav-link.active) {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+/* end of header section styles */
+
+/* main common styles */
+
+main section {
+    padding: 3rem var(--min-gap);
+    min-height: 80vh;
+}
+
+.section-heading {
+    color: var(--text-light-color);
+    text-align: center;
+    margin: var(--min-gap) 0;
+}
+
+/* footer section styles */
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-light-color);
+    line-height: 150%;
+}
+
+footer .container {
+    background-color: var(--nav-background-color);
+    background: url('images/04-polish-wood.png');
+    box-shadow: 0 -3px 3px -2px hsla(217, 19%, 35%, 0.2);
+    padding: var(--min-gap) var(--min-padding);
+}
+
+footer p:not(:last-child) {
+    margin-bottom: var(--min-padding);
+}
+
+footer p:not(:last-child) a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer p:last-child {
+    font-weight: 300;
+}
+
+footer p:last-child a {
+    color: var(--text-light-color);
+    text-decoration: none;
+}
+
+footer p:last-child a:hover {
+    color: var(--text-dark-color);
+    text-decoration: underline dotted var(--dark-bg-color);
+}
+
+.footer-separator {
+    color: var(--dark-bg-color);
+}
+
+footer hr {
+    margin: 1rem auto;
+    border: none;
+    border-bottom: 4px dotted var(--light-bg-color);
+    width: 250px;
+}
+
+/* end of footer section styles */
+
+/* All media queries */
+
+@media screen and (max-width: 800px) {
+    
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo {
+        display: flex;
+    }
+    
+    nav {
+        justify-content: right;
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: end;
+        gap: 0;
+    }
+
+    nav li {
+        padding: var(--min-padding) 0;
+    }
+
+    .nav-toggle-label {
+        display: flex;
+        position: absolute;
+        top: var(--min-padding);
+        right: 0;
+        padding: var(--min-padding);
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+}
+
+
+
+
