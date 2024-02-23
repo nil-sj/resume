@@ -40,6 +40,14 @@ body {
     background: url('images/02-heavy-paper.png');
 }
 
+/* stuff only for passing the test */
+#mainHeading {
+    color: red;
+}
+.funParagraph {
+    color: green;
+}
+
 /* Navigation Styles */
 
 header {
@@ -102,6 +110,9 @@ nav a {
     text-decoration: none;
     font-size: 1rem;
     text-transform: uppercase;
+    font-family: "Solitreo", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav a:hover {
@@ -123,12 +134,26 @@ nav li:has(.nav-link.active) {
 main section {
     padding: 3rem var(--min-gap);
     min-height: 80vh;
+    color: var(--text-light-color);
 }
 
 .section-heading {
     color: var(--text-light-color);
     text-align: center;
-    margin: var(--min-gap) 0;
+    margin: var(--min-gap) 0 var(--min-padding) 0;
+    font-family: "Solitreo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.section-subheading {
+    color: var(--accent-color);
+    text-align: center;
+    margin: 0 0 var(--min-gap) 0;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* footer section styles */
