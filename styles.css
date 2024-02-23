@@ -156,6 +156,17 @@ main section {
     font-style: normal;
 }
 
+.section-subheading::after {
+    content: "";
+    display: block;
+    height: 25px;
+    background-image: url('images/heading-bottom-border-25x320.png');
+    /* Image by https://www.freepik.com/free-vector/calligraphic-ornamental-divider-collection_12261828.htm */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 0.4;
+}
+
 /* footer section styles */
 
 footer {
