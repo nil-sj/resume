@@ -170,7 +170,306 @@ main section {
     opacity: 0.4;
 }
 
+.accent {
+    color: var(--accent-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.weight-med {
+    font-weight: 500;
+}
+
+/* Hero section styles */
+
+#hero {
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+#hero .hero-left {
+    position: absolute;
+    top: 100px;
+    left: -200px;
+    width: 500px;
+    transform: rotate(50deg);
+    opacity: 0.5;
+    /* background-color: var(--light-bg-color); */
+}
+
+#hero .hero-right {
+    position: absolute;
+    top: 100px;
+    right: -150px;
+    width: 500px;
+    transform: rotate(-40deg);
+    /* background-color: var(--light-bg-color); */
+    padding-right: 1rem;
+    opacity: 0.7;
+}
+
+.hero-headline {
+    width: 50%;
+    margin: 150px auto 3rem auto;
+    text-align: center;
+    font-family: "Solitreo", cursive;
+    position: relative;
+}
+
+.hero-headline::after {
+    content : "";
+    position: absolute;
+    left    : 40%;
+    bottom  : 0;
+    height  : 1px;
+    width   : 20%;
+    border-bottom: 4px dotted var(--light-bg-color);
+}
+
+.hero-headline h3 {
+    font-size: 2rem;
+}
+
+.hero-headline h1 {
+    font-size: 5rem;
+}
+
+.hero-description {
+    width: 40%;
+    margin: 0 auto;
+    color: var(--accent-color);
+    text-align: center;
+    font-family: "Solitreo", cursive;
+    font-size: 1.2rem;
+}
+
+/* About section styles */
+
+.about-content {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-left {
+    text-align: right;
+    padding: 3rem 3rem;
+}
+
+.about-right {
+    text-align: left;
+    padding: 3rem 3rem;
+    border-left: 2px solid var(--light-bg-color); 
+}
+
+.hobbies-para {
+    text-align: center;
+    font-family: "Solitreo", cursive;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+.hobbies-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+  
+.hobby {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+  
+.about-sub-icon {
+    height: 6rem;
+    width: 6rem;
+    opacity: 0.6;
+    border: 2px solid var(--text-light-color);
+    border-radius: 50%;
+    /* background-color: var(--light-bg-color); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobby h4 {
+    font-family: "Solitreo", cursive;
+    font-size: 1rem;
+    color: var(--text-light-color);
+}
+
+/* Profile section styles */
+
+.profile-content {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-left {
+    text-align: center;
+    padding: 3rem 3rem;
+}
+
+.profile-right {
+    text-align: left;
+    padding: 3rem 3rem;
+    border-left: 2px solid var(--light-bg-color); 
+}
+
+.profile-pic {
+    width: 180px;
+    border-radius: 50%;
+    border: solid 4px transparent;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.profile-name {
+    font-family: "Solitreo", cursive;
+    font-size: 1.5rem;
+    color: var(--text-dark-color);
+}
+
+.profile-designation {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin: 2rem 0;
+}
+
+.intro {
+    font-family: "Solitreo", cursive;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 1.2rem 0;
+    color: var(--text-light-color);
+}
+
+.education {
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 1rem 0; 
+    color: var(--text-dark-color);
+}
+
+.CTA-resume {
+    margin: 2.5rem 0;
+}
+
+.resume {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.resume:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border: solid 1px var(--accent-color);
+}
+
+.profile-icons {
+    font-size: 2rem;
+}
+  
+.profile-icon-links {
+    text-decoration: none;
+    color: inherit;
+    margin: 0.2rem 0.5rem;
+}
+  
+.profile-icon-links:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+  
+.profile-subhead {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    font-family: "Solitreo", cursive;
+    color: var(--accent-color);
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent-color);
+    text-transform: uppercase;
+}
+
+.experience {
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 1rem 0; 
+    color: var(--text-dark-color);
+}
+
+.courses-list {
+    margin-left: 1rem;
+}
+
+.course {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--text-dark-color);
+}
+
+#profile .weight-med {
+    color: var(--text-light-color);
+}
+
+.low-profile-links {
+    text-decoration: none;
+    color: inherit;
+}
+  
+.low-profile-links:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+  
+.highlighted-skills {
+    font-weight: 400;
+    font-size: 0.8rem;
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--dark-bg-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    padding: 0.2rem 0.8rem;
+    margin-right: 0.2rem;
+    line-height: 2.5rem;
+    white-space: nowrap;
+}
+  
+.skills {
+    font-weight: 300;
+    font-size: 0.8rem;
+    background-color: #F0F0F0;
+    background-color: var(--nav-background-color);
+    color: var(--text-dark-color);
+    border-radius: 5px;
+    padding: 0.2rem 0.4rem;
+    margin-right: 0.2rem;
+    white-space: nowrap;
+    line-height: 2.5rem;
+}  
+
 /* contact section styles */
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: "Solitreo", cursive;
+}
 
 form {
     display: grid;
@@ -178,7 +477,7 @@ form {
     width: min(36rem, 100%);
     font-size: 16px;
     line-height: 1.5;
-    margin: var(--min-padding) auto 0 auto;
+    margin: var(--min-padding) auto 2rem auto;
 }
 
 .form-title {
@@ -345,4 +644,150 @@ footer hr {
     .nav-toggle:checked~nav {
         display: block;
     }
+
+    #hero .hero-left {
+        position: absolute;
+        top: 0px;
+        left: -150px;
+        width: 300px;
+    }
+    
+    #hero .hero-right {
+        position: absolute;
+        top: 0px;
+        right: -120px;
+        width: 300px;
+    }
+    
+    .hero-headline {
+        width: 80%;
+        margin: 200px auto 3rem auto;
+        text-align: center;
+        font-family: "Solitreo", cursive;
+        position: relative;
+    }
+    
+    .hero-headline::after {
+        content : "";
+        position: absolute;
+        left    : 40%;
+        bottom  : 0;
+        height  : 1px;
+        width   : 20%;
+        border-bottom: 4px dotted var(--light-bg-color);
+    }
+    
+    .hero-headline h3 {
+        font-size: 2rem;
+    }
+    
+    .hero-headline h1 {
+        font-size: 5rem;
+    }
+    
+    .hero-description {
+        width: 80%;
+        margin: 0 auto;
+        color: var(--accent-color);
+        text-align: center;
+        font-family: "Solitreo", cursive;
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .about-left {
+        padding: 1rem var(--min-padding) 1.5rem var(--min-padding);
+        text-align: center;
+        position: relative;
+    }
+
+    .about-left::after {
+        content : "";
+        position: absolute;
+        left    : 30%;
+        bottom  : 0;
+        height  : 2px;
+        width   : 35%;
+        border-bottom: 4px dotted var(--light-bg-color);
+    }
+
+    .about-right {
+        padding: 1rem var(--min-padding);
+        text-align: center;
+        border-left: none;
+    }
+
+    .hobbies-div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hobby {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .profile-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .profile-left {
+        padding: 1rem var(--min-padding) 1.5rem var(--min-padding);
+        text-align: center;
+        position: relative;
+    }
+
+    .profile-left::after {
+        content : "";
+        position: absolute;
+        left    : 30%;
+        bottom  : 0;
+        height  : 2px;
+        width   : 35%;
+        border-bottom: 4px dotted var(--light-bg-color);
+    }
+
+    .profile-right {
+        padding: 1rem var(--min-padding);
+        text-align: left;
+        border-left: none;
+    }
+
+    .profile-right .courses-list {
+        list-style: none;
+        margin-left: 0px;
+    }
+
+    .profile-right .accent {
+        color: transparent;
+    }
+
+    .profile-right .accent::after {
+        content: '\a';
+        white-space: pre;
+    }
+
+    .profile-right .course {
+        margin-bottom: 1rem;
+    }
+
+
+
+    .contact-intro br {
+        display: none;
+    }
+
 }
