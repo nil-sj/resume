@@ -560,6 +560,17 @@ main section {
 .collapsible-project-description {
     padding: 0.5rem 0;
 }
+
+.collapsible-project-description a {
+    color: inherit;
+    text-decoration: underline dotted var(--accent-color);
+}
+
+.collapsible-project-description a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+    background-color: var(--light-bg-color);
+}
   
 .collapsible-project-preview {
     margin-top: 1rem;
