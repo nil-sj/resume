@@ -463,6 +463,153 @@ main section {
     line-height: 2.5rem;
 }  
 
+/* Projects section styles */
+
+.projects-intro {
+    text-align: center;
+    padding: 0 160px;
+    margin-bottom: 2.5rem;
+}
+
+.projects-intro a {
+    text-decoration: dotted underline var(--accent-color);
+    color: inherit;
+}
+
+.projects-intro a:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+    background-color: var(--light-bg-color);
+}
+
+.projects-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.projects-content-left {
+    text-align: center;
+    padding: 3rem 3rem;
+}
+
+.projects-content-right {
+    text-align: left;
+    padding: 0;
+    border-left: 2px solid var(--light-bg-color); 
+}
+  
+.collapsible-project-item {
+    padding: 1rem 1rem;
+    border-left: 4px solid transparent;
+}
+  
+.collapsible-project-header {
+    padding: 0.2rem 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+  
+.collapsible-project-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    line-height: 100%;
+    font-weight: bold;
+    padding: 2px 9px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--light-bg-color);
+    right: 0.5rem;
+    /* transition: all 0.2s ease; */
+}
+
+.collapsible-project-header:hover {
+    color: var(--text-dark-color);
+}
+
+.collapsible-project-item:has(.collapsible-project-header:hover) {
+    border-left: 4px solid var(--light-bg-color);
+}
+
+.collapsible-project-header.active {
+    color: var(--accent-color);
+}
+
+.collapsible-project-item:has(.collapsible-project-header.active) {
+    border-left: 4px solid var(--accent-color);
+}
+  
+.collapsible-project-header.active::after {
+    content: "\2212";
+    background-color: var(--accent-color);
+    color: var(--body-background-color);
+}
+  
+.collapsible-project-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.collapsible-project-header.active ~ .collapsible-project-body {
+    max-height: unset;
+}
+
+.collapsible-project-description {
+    padding: 0.5rem 0;
+}
+  
+.collapsible-project-preview {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.project-tags {
+    margin-top: 0.5rem;
+}
+
+.project-buttons {
+    margin: 1rem 0;
+}
+
+.preview-image {
+    width: 100%;
+    max-width: 100%;
+}
+
+.preview {
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: var(--body-background-color);
+}
+
+.preview:hover {
+    background-color: var(--body-background-color);
+    color: var(--accent-color);
+}
+
+.source {
+    margin-left: 0.2rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.source:hover {
+    background-color: var(--light-bg-color);
+    color: var(--accent-color);
+}
+
 /* contact section styles */
 
 .contact-intro {
@@ -660,8 +807,8 @@ footer hr {
     }
     
     .hero-headline {
-        width: 80%;
-        margin: 200px auto 3rem auto;
+        width: 90%;
+        margin: 180px auto 2rem auto;
         text-align: center;
         font-family: "Solitreo", cursive;
         position: relative;
@@ -678,20 +825,20 @@ footer hr {
     }
     
     .hero-headline h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .hero-headline h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
     
     .hero-description {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         color: var(--accent-color);
         text-align: center;
         font-family: "Solitreo", cursive;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .about-content {
@@ -784,7 +931,47 @@ footer hr {
         margin-bottom: 1rem;
     }
 
+    .projects-intro {
+        text-align: center;
+        padding: 0px 0px;
+        margin-bottom: 2.5rem;
+    }
 
+    .projects-content {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-content-left {
+        display: none;
+    }
+
+    .projects-content-right {
+        border-left: none;
+    }
+
+    .collapsible-project-item {
+        padding: 0.8rem 0;
+        border-left: none;
+        border-bottom: 1px solid var(--accent-color);
+    }
+
+    .collapsible-project-item:last-child {
+        border-bottom: none;
+    }
+
+    .collapsible-project-item:has(.collapsible-project-header.active) {
+        border-left: none;
+    }
+
+    .collapsible-project-item:has(.collapsible-project-header:hover) {
+        border-left: none;
+    }
+
+    .collapsible-project-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .contact-intro br {
         display: none;
